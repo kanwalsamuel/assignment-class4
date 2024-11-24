@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Add this line at the top
 
 import { RiDeleteBack2Fill } from "react-icons/ri";
 import React, { useState } from "react";
