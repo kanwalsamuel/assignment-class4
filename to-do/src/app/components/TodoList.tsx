@@ -1,7 +1,6 @@
-"use client"; // Add this line at the top
-
-import { RiDeleteBack2Fill } from "react-icons/ri";
+"use client"
 import React, { useState } from "react";
+import { RiDeleteBack2Fill } from "react-icons/ri";
 
 const TodoList: React.FC = () => {
   const [todos, setTodo] = useState<string[]>([]);
@@ -46,7 +45,10 @@ const TodoList: React.FC = () => {
               onClick={() => handleDeleteTodo(index)}
               className="text-red-500 hover:text-red-700 transition-all"
             >
-              <RiDeleteBack2Fill className="h-6 w-6" />
+              {/* Wrap the icon with a span for styling */}
+              <span className="h-6 w-6 flex items-center justify-center">
+                <RiDeleteBack2Fill size={24} color="currentColor" />
+              </span>
             </button>
           </li>
         ))}
